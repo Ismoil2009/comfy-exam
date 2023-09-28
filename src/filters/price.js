@@ -2,25 +2,31 @@ import { getElement } from "../utils.js";
 import display from "../displayProducts.js";
 
 const setupPrice = (store) => {
-  const priceInput = getElement(".price-filter");
-  const priceValue = getElement(".price-value");
+  const priceInp = getElement(".price-filter");
+  const priceVal = getElement(".price-value");
 
-  // setup filter
-  let maxPrice = store.map((product) => product.price);
-  maxPrice = Math.max(...maxPrice);
-  maxPrice = Math.ceil(maxPrice / 100);
-  priceInput.value = maxPrice;
-  priceInput.max = maxPrice;
-  priceInput.min = 0;
-  priceValue.textContent = `Value : $${maxPrice}`;
+  let mxPrice = store.map((product) => product.price);
 
-  priceInput.addEventListener("input", function () {
-    const value = parseInt(priceInput.value);
-    priceValue.textContent = `Value : $${value}`;
+  mxPrice = Math.max(...mxPrice);
+  mxPrice = Math.ceil(mxPrice / 100);
+
+  priceInp.value = mxPrice;
+  priceInp.max = mxPrice;
+  priceInp.min = 0;
+
+  priceVal.textContent = `Value : $${mxPrice}`;
+
+  priceInp.addEventListener("input", function () {
+    const value = parseInt(priceInp.value);
+
+    priceVal.textContent = `Value : $${value}`;
+
     let newStore = store.filter((product) => product.price / 100 <= value);
     display(newStore, getElement(".products-container"), true);
+
     if (newStore.length < 1) {
       const products = getElement(".products-container");
+
       products.innerHTML = `<h3 class="filter-error">sorry, no products matched your search</h3>`;
     }
   });
