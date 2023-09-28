@@ -52,7 +52,6 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: var(--clr-white);
   color: var(--clr-grey-1);
-  line-height: 1.5;
   font-size: 0.875rem;
 }
 
@@ -68,7 +67,6 @@ h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
@@ -116,14 +114,8 @@ p {
   body {
     font-size: 1rem;
   }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
-  }
 }
+
 .img {
   width: 100%;
   display: block;
@@ -149,7 +141,6 @@ p {
   border-radius: var(--radius);
   padding: 0.375rem 0.75rem;
   text-transform: uppercase;
-  letter-spacing: var(--spacing);
   display: inline-block;
   transition: var(--transition);
   border-color: transparent;
@@ -274,7 +265,6 @@ p {
   .nav-link {
     color: var(--clr-white);
     margin-right: 3rem;
-    letter-spacing: var(--spacing);
     transition: var(--transition);
     font-size: 1.25rem;
   }
@@ -323,7 +313,6 @@ p {
 }
 
 .hero h3 {
-  text-transform: none;
   font-size: 1.5rem;
 }
 
@@ -335,7 +324,6 @@ p {
   display: inline-block;
   margin-top: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: var(--spacing);
   border-radius: var(--radius);
   transition: var(--transition);
 }
@@ -355,7 +343,6 @@ p {
 @media screen and (min-width: 992px) {
   .hero h1 {
     font-size: 5.25rem;
-    letter-spacing: 5px;
   }
 
   .hero h3 {
@@ -483,6 +470,11 @@ p {
   opacity: 1;
 }
 
+.product {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
 .product footer {
   padding: 0.75rem 0;
   text-align: center;
@@ -490,8 +482,8 @@ p {
 
 .product-name {
   margin-bottom: 0.25rem;
+  color: blue;
   text-transform: capitalize;
-  letter-spacing: var(--spacing);
 }
 
 .product-price {
@@ -500,34 +492,7 @@ p {
   font-weight: 700;
 }
 
-.featured-center {
-  margin: 3rem auto 2rem auto;
-  display: grid;
-  gap: 1rem;
-  min-height: 6rem;
-  position: relative;
-}
-
-.featured .btn {
-  display: block;
-  width: 11rem;
-  margin: 0 auto;
-  text-align: center;
-}
-
-@media screen and (min-width: 992px) {
-  .featured-center {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 @media screen and (min-width: 1200px) {
-  .featured-center {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
   .product .img {
     height: 13rem;
   }
@@ -565,7 +530,6 @@ p {
   background: var(--clr-grey-10);
   border-radius: var(--radius);
   border-color: transparent;
-  letter-spacing: var(--spacing);
 }
 
 .search-input::placeholder {
@@ -583,7 +547,6 @@ p {
   text-transform: capitalize;
   background: transparent;
   border-color: transparent;
-  letter-spacing: var(--spacing);
   color: var(--clr-grey-5);
   cursor: pointer;
   margin-bottom: 5px;
@@ -634,7 +597,7 @@ p {
 
 @media screen and (min-width: 1170px) {
   .products-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -678,7 +641,6 @@ p {
   font-size: 1.2rem;
   color: var(--clr-grey-8);
   text-transform: uppercase;
-  letter-spacing: var(--spacing);
   margin-bottom: 1.25rem;
 }
 
