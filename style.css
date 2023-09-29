@@ -68,7 +68,6 @@ h2,
 h3,
 h4 {
   text-transform: capitalize;
-  line-height: 1.25;
   margin-bottom: 0.75rem;
   font-weight: 400;
 }
@@ -108,10 +107,6 @@ p {
   }
 
   h4 {
-    font-size: 1rem;
-  }
-
-  body {
     font-size: 1rem;
   }
 }
@@ -421,7 +416,6 @@ p {
 }
 
 .about-text {
-  line-height: 2;
   max-width: 45em;
   margin: 0 auto;
   margin-top: 2rem;
@@ -532,7 +526,7 @@ p {
   margin-top: 4rem;
 }
 
-.page-hero {
+.page-orient {
   min-height: 15vh;
   display: grid;
   place-items: center;
@@ -540,7 +534,7 @@ p {
   color: var(--clr-grey-5);
 }
 
-.page-hero-title {
+.page-orient-title {
   font-weight: 500;
 }
 
@@ -584,7 +578,6 @@ p {
 
 .single-product-desc {
   max-width: 25em;
-  line-height: 1.8;
 }
 
 @media screen and (min-width: 992px) {
