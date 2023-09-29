@@ -25,10 +25,10 @@ const display = (products, element, filters) => {
   if (filters) return;
 
   element.addEventListener("click", function (e) {
-    const parent = e.target.parentElement;
+    const prnt = e.target.parentElement;
 
-    if (parent.classList.contains("product-cart-btn")) {
-      addToCart(parent.dataset.id);
+    if (prnt.classList.contains("product-cart-btn")) {
+      addToCart(prnt.dataset.id);
     }
   });
 };
