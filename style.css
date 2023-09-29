@@ -225,21 +225,6 @@ p {
   cursor: pointer;
 }
 
-.cart-item-count {
-  position: absolute;
-  top: -0.85rem;
-  right: -0.85rem;
-  background: var(--clr-primary-5);
-  width: 1.75rem;
-  height: 1.75rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  color: var(--clr-white);
-  font-weight: bold;
-  font-size: 1rem;
-}
-
 @media screen and (min-width: 800px) {
   .nav-center {
     position: relative;
@@ -611,12 +596,13 @@ p {
 }
 
 .page-hero {
-  min-height: 20vh;
+  min-height: 15vh;
   display: grid;
   place-items: center;
   background: var(--clr-grey-10);
   color: var(--clr-grey-5);
 }
+
 .page-hero-title {
   font-weight: 500;
 }
